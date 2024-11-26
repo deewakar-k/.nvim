@@ -1,34 +1,34 @@
 return {
-	{
-		"vague2k/vague.nvim",
-		config = function()
-			require("vague").setup({
-				-- optional configuration here
-				transparent = true,
-				style = {
-					headings = "bold",
-				},
-				colors = {
-					bg = "#000000",
-					func = "#bc96b0",
-				},
-				--		colors = {
-				--				,
-				--				keyword = "#787bab",
-				--				line = "#282830",
-				--				-- string = "#d4bd98",
-				--				string = "#8a739a",
-				--				-- string = "#f2e6ff",
-				--				-- number = "#f2e6ff",
-				--				-- string = "#d8d5b1",
-				--				number = "#8f729e",
-				--				-- type = "#dcaed7",
-				--			},
-			})
-
-			vim.cmd.colorscheme("vague")
-		end,
-	},
+	--	{
+	--		"vague2k/vague.nvim",
+	--		config = function()
+	--			require("vague").setup({
+	--				-- optional configuration here
+	--				transparent = false,
+	--				style = {
+	--					headings = "bold",
+	--				},
+	--				colors = {
+	--					bg = "#000000",
+	--					func = "#bc96b0",
+	--				},
+	--				--		colors = {
+	--				--				,
+	--				--				keyword = "#787bab",
+	--				--				line = "#282830",
+	--				--				-- string = "#d4bd98",
+	--				--				string = "#8a739a",
+	--				--				-- string = "#f2e6ff",
+	--				--				-- number = "#f2e6ff",
+	--				--				-- string = "#d8d5b1",
+	--				--				number = "#8f729e",
+	--				--				-- type = "#dcaed7",
+	--				--			},
+	--			})
+	--
+	--			vim.cmd.colorscheme("vague")
+	--		end,
+	--	},
 	--	{
 	--		"catppuccin/nvim",
 	--		name = "catppuccin",
@@ -154,4 +154,10 @@ return {
 	--			vim.cmd.colorscheme("kanagawa")
 	--		end,
 	--	},
+	{
+		"arcticicestudio/nord-vim",
+		config = function()
+			vim.cmd([[colorscheme nord]])
+		end,
+	},
 }
