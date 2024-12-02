@@ -154,10 +154,19 @@ return {
 	--			vim.cmd.colorscheme("kanagawa")
 	--		end,
 	--	},
+	--	{
+	--		"arcticicestudio/nord-vim",
+	--		config = function()
+	--			vim.cmd([[colorscheme nord]])
+	--		end,
+	--	},
 	{
-		"arcticicestudio/nord-vim",
+		"navarasu/onedark.nvim",
 		config = function()
-			vim.cmd([[colorscheme nord]])
+			require("onedark").setup({
+				style = "dark",
+			})
+			vim.cmd.colorscheme("onedark")
 		end,
 	},
 }
