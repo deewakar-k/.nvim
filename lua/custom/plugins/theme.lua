@@ -29,25 +29,25 @@ return {
 	--			vim.cmd.colorscheme("vague")
 	--		end,
 	--	},
-	--	{
-	--		"catppuccin/nvim",
-	--		name = "catppuccin",
-	--		priority = 1000,
-	--		config = function()
-	--			require("catppuccin").setup({
-	--				background = {
-	--					light = "latte",
-	--					dark = "mocha",
-	--				},
-	--				no_italic = true,
-	--				transparent_background = true,
-	--				color_overrides = {
-	--					mocha = {},
-	--				},
-	--			})
-	--			vim.cmd.colorscheme("catppuccin-mocha")
-	--		end,
-	--	},
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		config = function()
+			require("catppuccin").setup({
+				background = {
+					light = "latte",
+					dark = "mocha",
+				},
+				no_italic = true,
+				transparent_background = false,
+				color_overrides = {
+					mocha = {},
+				},
+			})
+			vim.cmd.colorscheme("catppuccin-mocha")
+		end,
+	},
 	--	{
 	--		"mellow-theme/mellow.nvim",
 	--		config = function()
@@ -160,13 +160,13 @@ return {
 	--			vim.cmd([[colorscheme nord]])
 	--		end,
 	--	},
-	{
-		"navarasu/onedark.nvim",
-		config = function()
-			require("onedark").setup({
-				style = "dark",
-			})
-			vim.cmd.colorscheme("onedark")
-		end,
-	},
+	--	{
+	--		"navarasu/onedark.nvim",
+	--		config = function()
+	--			require("onedark").setup({
+	--				style = "dark",
+	--			})
+	--			vim.cmd.colorscheme("onedark")
+	--		end,
+	--	},
 }
