@@ -29,25 +29,25 @@ return {
 	--			vim.cmd.colorscheme("vague")
 	--		end,
 	--	},
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-		config = function()
-			require("catppuccin").setup({
-				background = {
-					light = "latte",
-					dark = "mocha",
-				},
-				no_italic = true,
-				transparent_background = false,
-				color_overrides = {
-					mocha = {},
-				},
-			})
-			vim.cmd.colorscheme("catppuccin-mocha")
-		end,
-	},
+	--	{
+	--		"catppuccin/nvim",
+	--		name = "catppuccin",
+	--		priority = 1000,
+	--		config = function()
+	--			require("catppuccin").setup({
+	--				background = {
+	--					light = "latte",
+	--					dark = "mocha",
+	--				},
+	--				no_italic = true,
+	--				transparent_background = false,
+	--				color_overrides = {
+	--					mocha = {},
+	--				},
+	--			})
+	--			vim.cmd.colorscheme("catppuccin-mocha")
+	--		end,
+	--	},
 	--	{
 	--		"mellow-theme/mellow.nvim",
 	--		config = function()
@@ -169,4 +169,25 @@ return {
 	--			vim.cmd.colorscheme("onedark")
 	--		end,
 	--	},
+	--	{
+	--		"rose-pine/neovim",
+	--		name = "rose-pine",
+	--		config = function()
+	--			require("rose-pine").setup({
+	--				varaint = "main",
+	--			})
+	--			vim.cmd.colorscheme("rose-pine")
+	--		end,
+	--	},
+	{
+		"cpwrs/americano.nvim",
+		config = function()
+			-- Defaults
+			require("americano").setup({
+				terminal = true, -- Set terminal colors
+				overrides = {}, -- Override americano highlight groups
+			})
+			vim.cmd.colorscheme("americano")
+		end,
+	},
 }
