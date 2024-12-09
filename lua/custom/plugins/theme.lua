@@ -179,15 +179,21 @@ return {
 	--			vim.cmd.colorscheme("rose-pine")
 	--		end,
 	--	},
+	--	{
+	--		"cpwrs/americano.nvim",
+	--		config = function()
+	--			-- Defaults
+	--			require("americano").setup({
+	--				terminal = true, -- Set terminal colors
+	--				overrides = {}, -- Override americano highlight groups
+	--			})
+	--			vim.cmd.colorscheme("americano")
+	--		end,
+	--	},
 	{
-		"cpwrs/americano.nvim",
+		"yorumicolors/yorumi.nvim",
 		config = function()
-			-- Defaults
-			require("americano").setup({
-				terminal = true, -- Set terminal colors
-				overrides = {}, -- Override americano highlight groups
-			})
-			vim.cmd.colorscheme("americano")
+			vim.cmd("colorscheme yorumi")
 		end,
 	},
 }
