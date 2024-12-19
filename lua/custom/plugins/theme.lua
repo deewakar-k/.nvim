@@ -85,63 +85,6 @@ return {
 	--		end,
 	--	},
 	--	{
-	--		"sam4llis/nvim-tundra",
-	--		lazy = false,
-	--		priority = 1000,
-	--		config = function()
-	--			require("nvim-tundra").setup({
-	--				transparent_background = false,
-	--				dim_inactive_windows = {
-	--					enabled = false,
-	--					color = nil,
-	--				},
-	--				sidebars = {
-	--					enabled = true,
-	--					color = nil,
-	--				},
-	--				editor = {
-	--					search = {},
-	--					substitute = {},
-	--				},
-	--				syntax = {
-	--					booleans = { bold = true, italic = true },
-	--					comments = { bold = true, italic = true },
-	--					conditionals = {},
-	--					constants = { bold = true },
-	--					fields = {},
-	--					functions = {},
-	--					keywords = {},
-	--					loops = {},
-	--					numbers = { bold = true },
-	--					operators = { bold = true },
-	--					punctuation = {},
-	--					strings = {},
-	--					types = { italic = true },
-	--				},
-	--				plugins = {
-	--					lsp = true,
-	--					semantic_tokens = true,
-	--					treesitter = true,
-	--					telescope = true,
-	--					nvimtree = true,
-	--					cmp = true,
-	--					context = true,
-	--					dbui = true,
-	--					gitsigns = true,
-	--					neogit = true,
-	--					textfsm = true,
-	--				},
-	--				overwrite = {
-	--					colors = {},
-	--					highlights = {},
-	--				},
-	--			})
-	--			vim.g.tundra_biome = "arctic"
-	--			vim.opt.background = "dark"
-	--			vim.cmd.colorscheme("tundra")
-	--		end,
-	--	},
-	--	{
 	--		"rebelot/kanagawa.nvim",
 	--		lazy = false,
 	--		priority = 1000,
@@ -174,7 +117,7 @@ return {
 	--		name = "rose-pine",
 	--		config = function()
 	--			require("rose-pine").setup({
-	--				varaint = "main",
+	--				variant = "dawn",
 	--			})
 	--			vim.cmd.colorscheme("rose-pine")
 	--		end,
@@ -190,10 +133,18 @@ return {
 	--			vim.cmd.colorscheme("americano")
 	--		end,
 	--	},
+	--	{
+	--		"yorumicolors/yorumi.nvim",
+	--		config = function()
+	--			vim.cmd("colorscheme yorumi")
+	--		end,
+	--	},
 	{
-		"yorumicolors/yorumi.nvim",
+		"aktersnurra/no-clown-fiesta.nvim",
+		priority = 1000,
+		lazy = false,
 		config = function()
-			vim.cmd("colorscheme yorumi")
+			vim.cmd([[colorscheme no-clown-fiesta]])
 		end,
 	},
 }
