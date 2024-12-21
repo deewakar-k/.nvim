@@ -29,25 +29,25 @@ return {
 	--			vim.cmd.colorscheme("vague")
 	--		end,
 	--	},
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-		config = function()
-			require("catppuccin").setup({
-				background = {
-					light = "latte",
-					dark = "mocha",
-				},
-				no_italic = true,
-				transparent_background = true,
-				color_overrides = {
-					mocha = {},
-				},
-			})
-			vim.cmd.colorscheme("catppuccin-mocha")
-		end,
-	},
+	--	{
+	--		"catppuccin/nvim",
+	--		name = "catppuccin",
+	--		priority = 1000,
+	--		config = function()
+	--			require("catppuccin").setup({
+	--				background = {
+	--					light = "latte",
+	--					dark = "mocha",
+	--				},
+	--				no_italic = true,
+	--				transparent_background = true,
+	--				color_overrides = {
+	--					mocha = {},
+	--				},
+	--			})
+	--			vim.cmd.colorscheme("catppuccin-mocha")
+	--		end,
+	--	},
 	--	{
 	--		"mellow-theme/mellow.nvim",
 	--		config = function()
@@ -147,4 +147,19 @@ return {
 	--			vim.cmd([[colorscheme no-clown-fiesta]])
 	--		end,
 	--	},
+	{
+		"mhartington/oceanic-next",
+		config = function()
+			-- Set the colorscheme
+			vim.cmd([[colorscheme OceanicNext]])
+
+			-- Apply highlight settings using vim.cmd
+			vim.cmd([[
+			hi Normal guibg=NONE ctermbg=NONE
+			hi LineNr guibg=NONE ctermbg=NONE
+			hi SignColumn guibg=NONE ctermbg=NONE
+			hi EndOfBuffer guibg=NONE ctermbg=NONE
+		]])
+		end,
+	},
 }
