@@ -29,25 +29,25 @@ return {
 	--			vim.cmd.colorscheme("vague")
 	--		end,
 	--	},
-	--	{
-	--		"catppuccin/nvim",
-	--		name = "catppuccin",
-	--		priority = 1000,
-	--		config = function()
-	--			require("catppuccin").setup({
-	--				background = {
-	--					light = "latte",
-	--					dark = "mocha",
-	--				},
-	--				no_italic = true,
-	--				transparent_background = false,
-	--				color_overrides = {
-	--					mocha = {},
-	--				},
-	--			})
-	--			vim.cmd.colorscheme("catppuccin-mocha")
-	--		end,
-	--	},
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		config = function()
+			require("catppuccin").setup({
+				background = {
+					light = "latte",
+					dark = "mocha",
+				},
+				no_italic = true,
+				transparent_background = true,
+				color_overrides = {
+					mocha = {},
+				},
+			})
+			vim.cmd.colorscheme("catppuccin-mocha")
+		end,
+	},
 	--	{
 	--		"mellow-theme/mellow.nvim",
 	--		config = function()
@@ -139,12 +139,12 @@ return {
 	--			vim.cmd("colorscheme yorumi")
 	--		end,
 	--	},
-	{
-		"aktersnurra/no-clown-fiesta.nvim",
-		priority = 1000,
-		lazy = false,
-		config = function()
-			vim.cmd([[colorscheme no-clown-fiesta]])
-		end,
-	},
+	--	{
+	--		"aktersnurra/no-clown-fiesta.nvim",
+	--		priority = 1000,
+	--		lazy = false,
+	--		config = function()
+	--			vim.cmd([[colorscheme no-clown-fiesta]])
+	--		end,
+	--	},
 }
