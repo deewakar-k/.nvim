@@ -4,26 +4,23 @@ return {
 	--		config = function()
 	--			require("vague").setup({
 	--				-- optional configuration here
-	--				transparent = false,
+	--				transparent = true,
 	--				style = {
 	--					headings = "bold",
 	--				},
 	--				colors = {
 	--					bg = "#000000",
 	--					func = "#bc96b0",
+	--					keyword = "#787bab",
+	--					line = "#282830",
+	--					-- string = "#d4bd98",
+	--					string = "#8a739a",
+	--					-- string = "#f2e6ff",
+	--					-- number = "#f2e6ff",
+	--					-- string = "#d8d5b1",
+	--					number = "#8f729e",
+	--					-- type = "#dcaed7",
 	--				},
-	--				--		colors = {
-	--				--				,
-	--				--				keyword = "#787bab",
-	--				--				line = "#282830",
-	--				--				-- string = "#d4bd98",
-	--				--				string = "#8a739a",
-	--				--				-- string = "#f2e6ff",
-	--				--				-- number = "#f2e6ff",
-	--				--				-- string = "#d8d5b1",
-	--				--				number = "#8f729e",
-	--				--				-- type = "#dcaed7",
-	--				--			},
 	--			})
 	--
 	--			vim.cmd.colorscheme("vague")
@@ -147,19 +144,41 @@ return {
 	--			vim.cmd([[colorscheme no-clown-fiesta]])
 	--		end,
 	--	},
+	--	{
+	--		"mhartington/oceanic-next",
+	--		config = function()
+	--			-- Set the colorscheme
+	--			vim.cmd([[colorscheme OceanicNext]])
+	--
+	--			-- Apply highlight settings using vim.cmd
+	--			vim.cmd([[
+	--						hi Normal guibg=NONE ctermbg=NONE
+	--						hi LineNr guibg=NONE ctermbg=NONE
+	--						hi SignColumn guibg=NONE ctermbg=NONE
+	--						hi EndOfBuffer guibg=NONE ctermbg=NONE
+	--					]])
+	--		end,
+	--	},
 	{
-		"mhartington/oceanic-next",
+		"metalelf0/base16-black-metal-scheme",
 		config = function()
 			-- Set the colorscheme
-			vim.cmd([[colorscheme OceanicNext]])
+			vim.cmd([[colorscheme base16-black-metal-gorgoroth]])
 
-			-- Apply highlight settings using vim.cmd
-			vim.cmd([[
-			hi Normal guibg=NONE ctermbg=NONE
-			hi LineNr guibg=NONE ctermbg=NONE
-			hi SignColumn guibg=NONE ctermbg=NONE
-			hi EndOfBuffer guibg=NONE ctermbg=NONE
-		]])
+			-- Apply theme overrides
+			local function black_metal_theme_overrides()
+				vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", { fg = "#912222" })
+				vim.api.nvim_set_hl(0, "TSComment", { fg = "#555555", gui = nil })
+				vim.api.nvim_set_hl(0, "Visual", { bg = "#9b8d7f", fg = "#1e1e1e" })
+				vim.api.nvim_set_hl(0, "Search", { bg = "#9b8d7f", fg = "#1e1e1e" })
+
+				vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#888888", bg = "#1e1e1e" })
+				vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#888888", bg = "#1e1e1e" })
+				vim.api.nvim_set_hl(0, "LineNr", { fg = "#d6d2c8" })
+			end
+
+			-- Call the overrides
+			black_metal_theme_overrides()
 		end,
 	},
 }
