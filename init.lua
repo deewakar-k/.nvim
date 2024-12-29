@@ -921,15 +921,22 @@ require("lazy").setup({
 	},
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
+		"nvim-treesitter/playground",
 		build = ":TSUpdate",
 		main = "nvim-treesitter.configs", -- Sets main module to use for opts
 		-- [[ Configure Treesitter ]] See `:help nvim-treesitter`
 		opts = {
 			ensure_installed = {
 				"bash",
+				"go",
 				"c",
+				"cpp",
+				"rust",
+				"javascript",
+				"typescript",
 				"diff",
 				"html",
+				"css",
 				"lua",
 				"luadoc",
 				"markdown",
@@ -937,6 +944,7 @@ require("lazy").setup({
 				"query",
 				"vim",
 				"vimdoc",
+				"sql",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,

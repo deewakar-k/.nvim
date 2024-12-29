@@ -159,26 +159,33 @@ return {
 	--					]])
 	--		end,
 	--	},
+	--	{
+	--		"metalelf0/base16-black-metal-scheme",
+	--		config = function()
+	--			-- Set the colorscheme
+	--			vim.cmd([[colorscheme base16-black-metal-gorgoroth]])
+	--
+	--			-- Apply theme overrides
+	--			local function black_metal_theme_overrides()
+	--				vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", { fg = "#912222" })
+	--				vim.api.nvim_set_hl(0, "TSComment", { fg = "#555555", gui = nil })
+	--				vim.api.nvim_set_hl(0, "Visual", { bg = "#9b8d7f", fg = "#1e1e1e" })
+	--				vim.api.nvim_set_hl(0, "Search", { bg = "#9b8d7f", fg = "#1e1e1e" })
+	--
+	--				vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#888888", bg = "#1e1e1e" })
+	--				vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#888888", bg = "#1e1e1e" })
+	--				vim.api.nvim_set_hl(0, "LineNr", { fg = "#d6d2c8" })
+	--			end
+	--
+	--			-- Call the overrides
+	--			black_metal_theme_overrides()
+	--		end,
+	--	},
 	{
-		"metalelf0/base16-black-metal-scheme",
+		"frenzyexists/aquarium-vim",
 		config = function()
-			-- Set the colorscheme
-			vim.cmd([[colorscheme base16-black-metal-gorgoroth]])
-
-			-- Apply theme overrides
-			local function black_metal_theme_overrides()
-				vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", { fg = "#912222" })
-				vim.api.nvim_set_hl(0, "TSComment", { fg = "#555555", gui = nil })
-				vim.api.nvim_set_hl(0, "Visual", { bg = "#9b8d7f", fg = "#1e1e1e" })
-				vim.api.nvim_set_hl(0, "Search", { bg = "#9b8d7f", fg = "#1e1e1e" })
-
-				vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#888888", bg = "#1e1e1e" })
-				vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#888888", bg = "#1e1e1e" })
-				vim.api.nvim_set_hl(0, "LineNr", { fg = "#d6d2c8" })
-			end
-
-			-- Call the overrides
-			black_metal_theme_overrides()
+			vim.cmd([[colorscheme aquarium]])
+			vim.cmd([[highlight NonText guibg=NONE]])
 		end,
 	},
 }
