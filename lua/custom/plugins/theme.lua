@@ -68,19 +68,19 @@ return {
 	--			vim.cmd([[colorscheme mellow]])
 	--		end,
 	--	},
-	{
-		"dgox16/oldworld.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("oldworld").setup({
-				integrations = {
-					telescope = false,
-				},
-			})
-			vim.cmd.colorscheme("oldworld")
-		end,
-	},
+	--	{
+	--		"dgox16/oldworld.nvim",
+	--		lazy = false,
+	--		priority = 1000,
+	--		config = function()
+	--			require("oldworld").setup({
+	--				integrations = {
+	--					telescope = false,
+	--				},
+	--			})
+	--			vim.cmd.colorscheme("oldworld")
+	--		end,
+	--	},
 	--	{
 	--		"rebelot/kanagawa.nvim",
 	--		lazy = false,
@@ -136,14 +136,19 @@ return {
 	--			vim.cmd("colorscheme yorumi")
 	--		end,
 	--	},
-	--	{
-	--		"aktersnurra/no-clown-fiesta.nvim",
-	--		priority = 1000,
-	--		lazy = false,
-	--		config = function()
-	--			vim.cmd([[colorscheme no-clown-fiesta]])
-	--		end,
-	--	},
+	{
+		"aktersnurra/no-clown-fiesta.nvim",
+		priority = 1000,
+		lazy = false,
+		config = function()
+			require("no-clown-fiesta").setup({
+				styles = {
+					italic = true,
+				},
+			})
+			vim.cmd([[colorscheme no-clown-fiesta]])
+		end,
+	},
 	--	{
 	--		"mhartington/oceanic-next",
 	--		config = function()
@@ -224,6 +229,18 @@ return {
 	--				base0F = text,
 	--			})
 	--			-- vim.cmd("colorscheme base16")
+	--		end,
+	--	},
+	--	{
+	--		"sainnhe/gruvbox-material",
+	--		lazy = false,
+	--		priority = 1000,
+	--		config = function()
+	--			-- Optionally configure and load the colorscheme
+	--			-- directly inside the plugin declaration.
+	--			vim.g.gruvbox_material_enable_italic = true
+	--			vim.g.gruvbox_material_foreground = "mix"
+	--			vim.cmd.colorscheme("gruvbox-material")
 	--		end,
 	--	},
 }
