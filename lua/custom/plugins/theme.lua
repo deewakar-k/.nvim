@@ -136,19 +136,19 @@ return {
 	--			vim.cmd("colorscheme yorumi")
 	--		end,
 	--	},
-	{
-		"aktersnurra/no-clown-fiesta.nvim",
-		priority = 1000,
-		lazy = false,
-		config = function()
-			require("no-clown-fiesta").setup({
-				styles = {
-					italic = true,
-				},
-			})
-			vim.cmd([[colorscheme no-clown-fiesta]])
-		end,
-	},
+	--	{
+	--		"aktersnurra/no-clown-fiesta.nvim",
+	--		priority = 1000,
+	--		lazy = false,
+	--		config = function()
+	--			require("no-clown-fiesta").setup({
+	--				styles = {
+	--					italic = true,
+	--				},
+	--			})
+	--			vim.cmd([[colorscheme no-clown-fiesta]])
+	--		end,
+	--	},
 	--	{
 	--		"mhartington/oceanic-next",
 	--		config = function()
