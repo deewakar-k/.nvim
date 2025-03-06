@@ -663,6 +663,12 @@ require("lazy").setup({
 					},
 				},
 				htmx = {},
+				html = {},
+				emmet_ls = {
+					filetypes = {
+						"html",
+					},
+				},
 			}
 
 			-- Ensure the servers and tools above are installed
