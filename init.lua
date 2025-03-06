@@ -662,6 +662,7 @@ require("lazy").setup({
 						workingDirectory = { mode = "auto" },
 					},
 				},
+				htmx = {},
 			}
 
 			-- Ensure the servers and tools above are installed
