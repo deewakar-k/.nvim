@@ -473,6 +473,8 @@ require("lazy").setup({
 
 			-- Allows extra capabilities provided by nvim-cmp
 			"hrsh7th/cmp-nvim-lsp",
+			{ "L3MON4D3/LuaSnip", version = "v2.*", build = "make install_jsregexp" },
+			{ "rafamadriz/friendly-snippets" },
 		},
 		config = function()
 			-- Brief aside: **What is LSP?**
@@ -664,11 +666,6 @@ require("lazy").setup({
 				},
 				htmx = {},
 				html = {},
-				emmet_ls = {
-					filetypes = {
-						"html",
-					},
-				},
 			}
 
 			-- Ensure the servers and tools above are installed
@@ -677,6 +674,7 @@ require("lazy").setup({
 			--    :Mason
 			--
 			--  You can press `g?` for help in this menu.
+			require("luasnip.loaders.from_vscode").lazy_load()
 			require("mason").setup()
 
 			-- You can add other tools here that you want Mason to install
@@ -737,11 +735,6 @@ require("lazy").setup({
 				typescript = { "prettierd", "eslint_d" },
 				javascriptreact = { "prettierd", "eslint_d" },
 				typescriptreact = { "prettierd", "eslint_d" },
-			},
-			formatters = {
-				prettier = {
-					prepend_args = { "--plugin", "prettier-plugin-tailwindcss" },
-				},
 			},
 		},
 	},

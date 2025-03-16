@@ -46,29 +46,6 @@ return {
 	--		end,
 	--	},
 	--	{
-	--		"mellow-theme/mellow.nvim",
-	--		config = function()
-	--			vim.g.mellow_italic_functions = false
-	--			vim.g.mellow_bold_functions = true
-	--			--		vim.g.mellow_transparent = true
-	--			--		vim.g.mellow_highlight_overrides = {
-	--			--			["NormalFloat"] = { bg = "None" }, -- Normal text in floating windows.
-	--			--			["FloatBorder"] = { bg = "None" }, -- Border of floating windows.
-	--
-	--			--			["TelescopeNormal"] = { bg = "None" },
-	--			--			["TelescopeBorder"] = { bg = "None" },
-	--			--			["TelescopePreviewTitle"] = { bg = "None" },
-	--			--			["TelescopeResultsTitle"] = { bg = "None" },
-	--			--			["TelescopePromptTitle"] = { bg = "None" },
-	--			--			["TelescopePromptNormal"] = { bg = "None" },
-	--			--			["TelescopePromptBorder"] = { bg = "None" },
-	--
-	--			--			["Visual"] = { bg = "#131314" }, -- Visual mode selection
-	--			--		}
-	--			vim.cmd([[colorscheme mellow]])
-	--		end,
-	--	},
-	--	{
 	--		"dgox16/oldworld.nvim",
 	--		lazy = false,
 	--		priority = 1000,
@@ -241,6 +218,35 @@ return {
 	--			vim.g.gruvbox_material_enable_italic = true
 	--			vim.g.gruvbox_material_foreground = "mix"
 	--			vim.cmd.colorscheme("gruvbox-material")
+	--		end,
+	--	},
+	--	{
+	--		"2nthony/vitesse.nvim",
+	--		dependencies = {
+	--			"tjdevries/colorbuddy.nvim",
+	--			config = function()
+	--				vim.cmd("colorscheme vitesse")
+	--			end,
+	--		},
+	--	},
+	{
+		"cocopon/iceberg.vim",
+		config = function()
+			vim.cmd("colorscheme iceberg")
+		end,
+	},
+	--	{
+	--		"zenbones-theme/zenbones.nvim",
+	--		-- Optionally install Lush. Allows for more configuration or extending the colorscheme
+	--		-- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+	--		-- In Vim, compat mode is turned on as Lush only works in Neovim.
+	--		dependencies = "rktjmp/lush.nvim",
+	--		lazy = false,
+	--		priority = 1000,
+	--		-- you can set set configuration options here
+	--		config = function()
+	--			vim.g.zenbones_darken_comments = 45
+	--			vim.cmd.colorscheme("zenbones")
 	--		end,
 	--	},
 }
