@@ -45,19 +45,19 @@ return {
 	--			vim.cmd.colorscheme("catppuccin-mocha")
 	--		end,
 	--	},
-	--	{
-	--		"dgox16/oldworld.nvim",
-	--		lazy = false,
-	--		priority = 1000,
-	--		config = function()
-	--			require("oldworld").setup({
-	--				integrations = {
-	--					telescope = false,
-	--				},
-	--			})
-	--			vim.cmd.colorscheme("oldworld")
-	--		end,
-	--	},
+	{
+		"dgox16/oldworld.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("oldworld").setup({
+				integrations = {
+					telescope = false,
+				},
+			})
+			vim.cmd.colorscheme("oldworld")
+		end,
+	},
 	--	{
 	--		"rebelot/kanagawa.nvim",
 	--		lazy = false,
@@ -229,12 +229,12 @@ return {
 	--			end,
 	--		},
 	--	},
-	{
-		"cocopon/iceberg.vim",
-		config = function()
-			vim.cmd("colorscheme iceberg")
-		end,
-	},
+	--	{
+	--		"cocopon/iceberg.vim",
+	--		config = function()
+	--			vim.cmd("colorscheme iceberg")
+	--		end,
+	--	},
 	--	{
 	--		"zenbones-theme/zenbones.nvim",
 	--		-- Optionally install Lush. Allows for more configuration or extending the colorscheme
@@ -247,6 +247,15 @@ return {
 	--		config = function()
 	--			vim.g.zenbones_darken_comments = 45
 	--			vim.cmd.colorscheme("zenbones")
+	--		end,
+	--	},
+	-- Lazy
+	--	{
+	--		"Verf/deepwhite.nvim",
+	--		lazy = false,
+	--		priority = 1000,
+	--		config = function()
+	--			vim.cmd([[colorscheme deepwhite]])
 	--		end,
 	--	},
 }
