@@ -4,7 +4,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("gruvbuddy")
+			vim.cmd.colorscheme("kanagawa")
 		end,
 	},
 	"vague2k/vague.nvim",
@@ -13,7 +13,21 @@ return {
 		name = "catppuccin",
 	},
 	"dgox16/oldworld.nvim",
-	"rebelot/kanagawa.nvim",
+	{
+		"rebelot/kanagawa.nvim",
+		opts = {
+			colors = {
+				theme = {
+					all = {
+						ui = {
+							bg = "#0a0c0f",
+							bg_gutter = "none",
+						},
+					},
+				},
+			},
+		},
+	},
 	"arcticicestudio/nord-vim",
 	"navarasu/onedark.nvim",
 	"rose-pine/neovim",
