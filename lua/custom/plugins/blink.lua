@@ -1,22 +1,18 @@
 return {
 	{
 		"saghen/blink.cmp",
-		dependencies = { "L3MON4D3/LuaSnip", version = "v2.*" },
+		dependencies = { "rafamadriz/friendly-snippets" },
+		version = "1.*",
 		opts = {
 			keymap = { preset = "enter" },
+
 			appearance = {
 				nerd_font_variant = "mono",
 			},
+
 			completion = { documentation = { auto_show = false } },
 
-			sources = {
-				default = { "lsp", "path", "snippets", "buffer" },
-			},
-
-			snippets = { preset = "luasnip" },
-
-			fuzzy = { implementation = "prefer_rust_with_warning" },
+			signature = { enabled = true },
 		},
-		opts_extend = { "sources.default" },
 	},
 }
