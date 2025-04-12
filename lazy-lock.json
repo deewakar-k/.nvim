@@ -36,9 +36,7 @@
   "nvim-treesitter": { "branch": "master", "commit": "0e21ee8df6235511c02bab4a5b391d18e165a58d" },
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "698b5f805722254bca3c509591c1806d268b6c2f" },
   "nvim-ts-autotag": { "branch": "main", "commit": "a1d526af391f6aebb25a8795cbc05351ed3620b5" },
-  "nvim-web-devicons": { "branch": "master", "commit": "c90dee4e930ab9f49fa6d77f289bff335b49e972" },
   "oceanic-next": { "branch": "master", "commit": "09833f72d5ba23de2e8bcae18f479f326f5f677a" },
-  "oil.nvim": { "branch": "master", "commit": "302bbaceeafc690e6419e0c8296e804d60cb9446" },
   "oldworld.nvim": { "branch": "main", "commit": "da084c76391d2cdef2e692f9312e2e7d73634a1d" },
   "onedark.nvim": { "branch": "master", "commit": "67a74c275d1116d575ab25485d1bfa6b2a9c38a6" },
   "persistence.nvim": { "branch": "main", "commit": "166a79a55bfa7a4db3e26fc031b4d92af71d0b51" },
@@ -52,6 +50,7 @@
   "vague.nvim": { "branch": "main", "commit": "982453f671332ce0240a15be5eb223d32f877e06" },
   "vitesse.nvim": { "branch": "main", "commit": "1e00ee10a7ac23426684f43be80eb3edf92c082c" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
+  "yazi.nvim": { "branch": "main", "commit": "8418e7028f91feacffcf75236fd4e93a5a3fe911" },
   "yorumi.nvim": { "branch": "main", "commit": "0d0c995ecb90cd21e701fd30b7c5e794cb1e41ce" },
   "zenbones.nvim": { "branch": "main", "commit": "dbd485fa5d5230d175e024374d41dab5ad71b119" }
 }

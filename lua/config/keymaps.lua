@@ -1,3 +1,2 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+vim.keymap.set("n", "<leader>h", "<cmd>split<CR>", { desc = "Split Window Below" })
+vim.keymap.set("n", "<leader>v", "<cmd>vsplit<CR>", { desc = "Split Window Right" })
