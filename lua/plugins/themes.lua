@@ -4,8 +4,8 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      --vim.cmd.colorscheme("vague")
-      vim.cmd("colorscheme base16-black-metal-gorgoroth")
+      vim.cmd.colorscheme("kanagawa")
+      --vim.cmd("colorscheme base16-black-metal-gorgoroth")
     end,
   },
   "vague2k/vague.nvim",
@@ -17,6 +17,9 @@ return {
   {
     "rebelot/kanagawa.nvim",
     opts = {
+      background = {
+        dark = "dragon",
+      },
       colors = {
         theme = {
           all = {
