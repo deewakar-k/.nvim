@@ -2,6 +2,9 @@ return {
   {
     "snacks.nvim",
     opts = {
+      picker = {
+        sources = { explorer = { layout = { auto_hide = { "input" } } } },
+      },
       dashboard = {
         preset = {
           pick = function(cmd, opts)
