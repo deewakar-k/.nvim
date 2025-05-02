@@ -4,11 +4,22 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme("catppuccin-mocha")
+      vim.cmd.colorscheme("vague")
       --vim.cmd("colorscheme base16-black-metal-gorgoroth")
     end,
   },
-  "vague2k/vague.nvim",
+  { "CosecSecCot/cosec-twilight.nvim" },
+  {
+    "neanias/everforest-nvim",
+  },
+  {
+    "vague2k/vague.nvim",
+    config = function()
+      require("vague").setup({ transparent = true })
+      vim.cmd("colorscheme vague")
+      vim.cmd(":hi statusline guibg=NONE")
+    end,
+  },
   {
     "catppuccin/nvim",
     name = "catppuccin",
