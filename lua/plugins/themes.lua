@@ -4,7 +4,7 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme("vague")
+      --vim.cmd.colorscheme("gruvbox-material")
       --vim.cmd("colorscheme base16-black-metal-gorgoroth")
     end,
   },
@@ -16,8 +16,8 @@ return {
     "vague2k/vague.nvim",
     config = function()
       require("vague").setup({ transparent = true })
-      vim.cmd("colorscheme vague")
-      vim.cmd(":hi statusline guibg=NONE")
+      --vim.cmd("colorscheme vague")
+      --vim.cmd(":hi statusline guibg=NONE")
     end,
   },
   {
@@ -43,6 +43,19 @@ return {
       },
     },
   },
+  {
+    "metalelf0/black-metal-theme-neovim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("black-metal").setup({
+        -- optional configuration here
+        theme = "immortal",
+        alt_bg = true,
+      })
+      require("black-metal").load()
+    end,
+  },
   "arcticicestudio/nord-vim",
   "navarasu/onedark.nvim",
   "rose-pine/neovim",
@@ -50,7 +63,6 @@ return {
   "yorumicolors/yorumi.nvim",
   "aktersnurra/no-clown-fiesta.nvim",
   "mhartington/oceanic-next",
-  "metalelf0/base16-black-metal-scheme",
   "frenzyexists/aquarium-vim",
   "https://github.com/RRethy/base16-nvim",
   "sainnhe/gruvbox-material",
